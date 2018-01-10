@@ -1,0 +1,17 @@
+div.container-fluid {
+  background-color: white;
+  border-color: white;
+  text-align: center;
+  height: 150px;
+}
+
+div.container-fluid h1{
+  font-size: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.pagination li a {
+  color : black;
+  border : none;
+}
