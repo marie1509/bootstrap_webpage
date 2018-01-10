@@ -2,16 +2,26 @@ div.container-fluid {
   background-color: white;
   border-color: white;
   text-align: center;
-  height: 150px;
+  height: 150%;
 }
 
 div.container-fluid h1{
-  font-size: 60px;
+  font-size: 200%;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
+  text-align: center;
+  line-height: 100%;
+  padding: 0;
 }
+
 
 .pagination li a {
   color : black;
   border : none;
+}
+
+a.navbar-brand {
+  color: black;
+  text-align: center;
+
 }

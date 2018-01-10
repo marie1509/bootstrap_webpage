@@ -3,45 +3,66 @@
   <head>
     <title>BootstrapSample</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-static-top">
+
+    <nav class="navbar navbar-default  navbar-static-top">
+    <div class="container-fluid">
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+
+    <h1>VOGUEWOMAN</h1>
+    </br>
+
+    <div id="gnavi" class="collapse navbar-collapse">
+      <ul class="nav nav-tabs list-inline">
+        <li class="list-inline-item active"><a href="">Fashion</a></li>
+        <li class="list-inline-item"><a href="">Beauty</a></li>
+        <li class="list-inline-item"><a href="">Lifestyle</a></li>
+        <li class="list-inline-item"><a href="">News</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <!-- <nav class="navbar navbar-default navbar-static-top">
      <div class="container-fluid">
+       <div class="navbar-header"> -->
        <!-- ハンバーガーメニューの記述 ここから -->
+       <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+      </button>
+      </div>
 
       <h1>VOGUEWOMAN</h1>
       </br>
 
-        <span class="menu">Fashion</span>
-        <span class="menu">Beauty</span>
-        <span class="menu">Lifestyle</span>
-        <span class="menu">News</span>
 
-     </div>
-    </nav>
-    <!-- <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <span>Fashion</span>
-        <li>Beauty</li>
-        <li>Lifestyle</li>
-        <li>News</li>
+     <div class="collapse navbar-collapse" id="gnavi">
+      <ul class="nav nav-tabs list-inline">
+       <li class="list-inline-item active"><a href="#">Fashion</a></li>
+       <li class="list-inline-item"><a href="#">Beauty</a></li>
+       <li class="list-inline-item"><a href="#">Lifestyle</a></li>
+       <li class="list-inline-item"><a href="#">News</a></li>
       </ul>
-    </div> -->
+    </div>
 
-    <!-- <nav class="navbar navbar-default">
-     <div class="container-fluid">
-      <ul>
-        <li>Fashion</li>
-        <li>Beauty</li>
-        <li>Lifestyle</li>
-        <li>News</li>
-      </ul>
-     </div>
-    </nav> -->
+    </div>
+    </nav>-->
+
 
    <div class="container">
 
@@ -49,25 +70,25 @@
 
        <div class="fashion">
         <h1>Fashion</h1>
-        <%= image_tag 'stil-243522.jpg' , :size =>'620x560' %>
+        <%= image_tag 'stil-243522.jpg' , :width =>"100%" %>
         <p>2018年春夏のトレンド速報</p>
        </div>
 
        <div class="Beauty">
         <h1>Beauty</h1>
-        <%= image_tag 'beauty.jpg' , :size =>'620x560' %>
+        <%= image_tag 'beauty.jpg' , :width =>"100%" %>
         <p>モードガールへおくる全力メイクのすすめ！</p>
        </div>
 
        <div class="Lifestyle">
         <h1>Lifestyle</h1>
-        <%= image_tag 'lifestyle.jpg' , :size =>'620x560' %>
+        <%= image_tag 'lifestyle.jpg' , :width =>"100%" %>
         <p>自宅をもっとオシャレに！インテリア特集</p>
        </div>
 
        <div class="News">
         <h1>News</h1>
-        <%= image_tag 'vacation.jpg' , :size =>'620x560' %>
+        <%= image_tag 'vacation.jpg' , :width =>"100%" %>
         <p>VOGUEWOMENに聞いた！2018年に訪れたい都市Top5</p>
        </div>
        <nav class="page">
@@ -90,15 +111,15 @@
       </nav>
 
       </article>
-
-      <aside class="col-ms-6 col-md-3">
+    <div class="row">
+      <aside class="col-md-3">
        <div id="user">
           <%= yield %>
        </div>
 
        <div id="news">
          <h2>Daily Ranking</h2>
-         <ul class="col-ms-6 side_menu">
+         <ul class="col-xs-6 side_menu">
            <li>1
              <p>2018年こそ英語学習！Netflixおすすめドラマシリーズ</p>
            </li>
@@ -115,8 +136,8 @@
       </div>
 
       </div>
-      </aside>
-
+    </aside>
+    </div>
 
     </div>
     <footer class="footer">
